@@ -1,0 +1,14 @@
+div.container > div.row > div.col-12 > div.comics-grid > div.entry > a.thumb, ['href']
+
+
+Manga:
+div.container > div.row > div.col-sm-12 > div.single-comic > div.bg-white > div.has-shadow> info > div.meta-data > div.col-12
+
+Caps:
+div.container > div.row > div.col-sm-12 > div.single-comic > div.has-shadow > div.section-body > div.chapters-wrapper
+
+Img:
+div.container > div.col-12 > img
+
+Img caps number:
+div.container > div.col-12 > div.bottom-row > div.section-right > div.col-6 > select
