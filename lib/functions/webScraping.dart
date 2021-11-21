@@ -1,7 +1,7 @@
 import 'package:web_scraper/web_scraper.dart';
 
 Future<List> getManga(String name) async {
-  final webScraper = WebScraper('https://www.mangaworld.io');
+  final webScraper = WebScraper('https://www.mangaworld.in');
   final endpoint = "/archive?keyword=$name";
   List values = [];
 

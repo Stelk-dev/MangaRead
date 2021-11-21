@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -16,13 +17,16 @@ void main() async {
   if (GetStorage().read("Manga") == null) GetStorage().write("Manga", []);
 
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(GetMaterialApp(
-    home: MyApp(),
-    title: 'Manga Read',
-    theme: ThemeData.dark(),
-    debugShowCheckedModeBanner: false,
-    debugShowMaterialGrid: false,
-  ));
+  runApp(DevicePreview(builder: (context) {
+    return MaterialApp(
+      home: MyApp(),
+      title: 'Manga Read',
+      theme: ThemeData.dark(),
+      useInheritedMediaQuery: true,
+      debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
+    );
+  }));
 }
 
 class MyApp extends StatefulWidget {
